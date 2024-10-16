@@ -1,3 +1,4 @@
+"use strict";
 let a = 1, b = 1;
 ++a; // 2, prefix form returns the new value
 b++; // 1, postfix form returns the old value
