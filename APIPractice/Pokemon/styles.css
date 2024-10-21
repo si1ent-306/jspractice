@@ -1,0 +1,79 @@
+body {
+    font-family: Arial, sans-serif; /* Set a default font */
+    margin: 2rem; /* Add some margin around the body content */
+}
+
+h1 { /* Add a heading for the title */
+    text-align: center;
+    margin-bottom: 1rem;
+}
+
+label {  /* Style the label for the input field */
+    display: block;
+    margin-bottom: 0.5rem;
+    font-weight: bold;
+}
+
+input[type="text"] { /* Style the input field */
+    padding: 0.5rem;
+    border: 1px solid #ccc;
+    border-radius: 4px;
+    width: 100%;
+    box-sizing: border-box; /* Include border in width calculation */
+}
+
+button { /* Style the fetch button */
+    padding: 0.75rem 1rem;
+    background-color: #4CAF50; /* Green color */
+    color: white;
+    border: none;
+    border-radius: 4px;
+    cursor: pointer;
+    margin-top: 1rem;
+}
+
+button:hover { /* Add hover effect for the button */
+    background-color: #3e8e41; /* Darker green on hover */
+}
+
+.pokemon-info { /* Create a container for fetched information */
+    display: flex;
+    flex-wrap: wrap; /* Allow items to wrap on smaller screens */
+    margin-top: 2rem;
+}
+
+.pokemon-info img { /* Style the image of the Pokémon */
+    width: 200px;
+    height: auto;
+    margin-right: 1rem;
+}
+
+.pokemon-info p { /* Style the paragraphs for info */
+    margin: 0.5rem 0;
+}
+
+#pokemonTypes { /* Style the list of Pokémon types */
+    list-style: none; /* Remove default bullet points */
+    padding: 0;
+    margin: 0;
+}
+
+#pokemonTypes li { /* Style individual type list items */
+    display: inline-block;
+    margin-right: 1rem;
+    padding: 0.5rem 1rem;
+    border-radius: 4px;
+    background-color: #f1f1f1; /* Light gray background */
+    font-size: 0.8rem; /* Smaller font size */
+}/* Add color rules for different types */
+#pokemonTypes li.fire {
+    background-color: #FF6E40; /* Fire type */
+}
+
+#pokemonTypes li.water {
+    background-color: #63B5F5; /* Water type */
+}
+
+#pokemonTypes li.grass {
+    background-color: #90EE90; /* Grass type */
+}
