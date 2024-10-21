@@ -1,13 +1,28 @@
+@import url('https://fonts.googleapis.com/css2?family=Raleway:ital,wght@0,100..900;1,100..900&display=swap');
+
 body {
-    font-family: Arial, sans-serif; /* Set a default font */
+    font-family: 'Raleway', sans-serif; /* Set a default font */
     margin: 2rem; /* Add some margin around the body content */
+
 }
 
 h1 { /* Add a heading for the title */
     text-align: center;
     margin-bottom: 1rem;
 }
-
+div#pokemonCard{
+    display: flex;
+    padding: 5px;
+    border: 3px solid black;
+    border-radius: 15px;
+    justify-content: center;
+    align-items: center;
+    text-align: center;
+    flex-direction: column;
+    margin: 0 auto;
+    box-sizing: border-box;  /* Added for proper sizing */
+    max-width: 300px;  /* Change this to your desired max width */
+}
 label {  /* Style the label for the input field */
     display: block;
     margin-bottom: 0.5rem;
@@ -50,6 +65,9 @@ button:hover { /* Add hover effect for the button */
 
 .pokemon-info p { /* Style the paragraphs for info */
     margin: 0.5rem 0;
+}
+#pokemonDisplayName{
+    font-weight: bold;
 }
 
 #pokemonTypes { /* Style the list of Pokémon types */

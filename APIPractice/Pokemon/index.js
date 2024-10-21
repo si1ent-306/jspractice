@@ -36,6 +36,7 @@ async function fetchData() {
         console.log(data);
 
         // Extract elements using jQuery
+        const $pokemonCard = $('#pokemonCard');
         const $imgElement = $("#pokemonImage");
         const $displayName = $("#pokemonDisplayName");
         const $typesList = $("#pokemonTypes");
@@ -62,8 +63,8 @@ async function fetchData() {
         });
 
         // Set height and weight
-        $height.text(data.height * 10 + 'cm');
-        $weight.text(data.weight + 'kg');
+        $height.text('Height: ' +data.height * 10 + 'cm');
+        $weight.text('Weight: ' + data.weight + 'kg');
 
         // Append abilities to the list
         $.each(data.abilities, function (index, ability) {
@@ -78,6 +79,7 @@ async function fetchData() {
         $weight.show();
         $id.show();
         $abilities.show();
+        $pokemonCard.show();
 
     } catch (error) {
         console.error(error);

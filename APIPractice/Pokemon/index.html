@@ -8,14 +8,16 @@
     <title>Fetch Pokemon Data</title>
 </head>
 <body>
-  <label for="pokemonName">Pokemon</label><input type="text" id="pokemonName" placeholder="Enter Pokemon Name"/>
+  <label for="pokemonName">Pokemon</label><input type="text" id="pokemonName" placeholder="Enter Pokemon Name (Ex: Pikachu)"/>
   <button onclick="fetchData()">Fetch Pokemon</button>
-  <p id="pokemonDisplayName" style="display: none"></p>
-  <p id="pokemonID" style="display: none"></p>
-  <img src="" id="pokemonImage" alt="Pokemon Image" style="display: none;"/>
-  <ul id="pokemonTypes"></ul>
-  <p id="pokemonHeight"></p>
-  <p id="pokemonWeight"></p>
-  <ul id="pokemonAbilities"></ul>
+  <div id="pokemonCard" style="display: none">
+    <p id="pokemonDisplayName" style="display: none"></p>
+    <p id="pokemonID" style="display: none"></p>
+    <img src="" id="pokemonImage" alt="Pokemon Image" style="display: none;"/>
+    <ul id="pokemonTypes"></ul>
+    <p id="pokemonHeight"></p>
+    <p id="pokemonWeight"></p>
+    <ul id="pokemonAbilities"></ul>
+  </div>
 </body>
 </html>
