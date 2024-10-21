@@ -19,55 +19,70 @@
 //     .catch(error => console.log(error));
 
 
-async function fetchData(){
+async function fetchData() {
+    try {
+        // Get the user input and convert to lowercase
+        const pokemonName = $("#pokemonName").val().toLowerCase();
 
-    try{
-
-        const pokemonName = document.getElementById("pokemonName").value.toLowerCase();
+        // Fetch Pokemon data from the API
         const response = await fetch(`https://pokeapi.co/api/v2/pokemon/${pokemonName}`);
-        if(!response.ok){
+
+        // Check if the response is valid
+        if (!response.ok) {
             throw new Error("Could not fetch resource");
         }
 
         const data = await response.json();
         console.log(data);
 
-        //fetch the elements
-        const pokemonSprite = data.sprites.front_default;
-        const imgElement = document.getElementById("pokemonImage");
-        const displayName = document.getElementById("pokemonDisplayName");
-        const typesList  = document.getElementById("pokemonTypes");
-        const height = document.getElementById("pokemonHeight");
-        const weight = document.getElementById("pokemonWeight");
-        const id = document.getElementById('pokemonID');
+        // Extract elements using jQuery
+        const $imgElement = $("#pokemonImage");
+        const $displayName = $("#pokemonDisplayName");
+        const $typesList = $("#pokemonTypes");
+        const $height = $("#pokemonHeight");
+        const $weight = $("#pokemonWeight");
+        const $id = $("#pokemonID");
+        const $abilities = $("#pokemonAbilities");
 
-        //assign the pokemons info
-        displayName.textContent = data.name.toUpperCase();
-        imgElement.src = pokemonSprite;
-        id.innerText = 'Pokemon ID: ' + data.id;
-        //Clears the list
-        typesList.innerHTML = '';
-        //fetches all of the types of the pokemon
-        data.types.forEach(function (type){
-            let typeli = document.createElement('li');
-            typeli.innerText = type['type']['name'];
-            typeli.classList.add(type['type']['name'].toLowerCase()); // Add the type name as a class
-            typesList.append(typeli);
-        })
+        // Assign the Pokemon's info
+        $displayName.text(data.name.toUpperCase());
+        $imgElement.attr("src", data.sprites.front_default); // Set the image source
+        $id.text('Pokemon ID: ' + data.id);
 
-        height.innerText = data.height * 10 + 'cm';
-        weight.innerText = data.weight + 'kg';
+        // Clear existing list items
+        $typesList.empty().text('Types\n');
+        $abilities.empty().text('Abilities\n');
 
-        //displaying the info
-        imgElement.style.display = "block";
-        displayName.style.display = "block";
-        typesList.style.display = "block";
-        height.style.display = "block";
-        weight.style.display = "block";
-        id.style.display = "block";
-    }
-    catch(error){
+        // Append types to the list
+        $.each(data.types, function (index, type) {
+            $("<li>")
+                .text(type.type.name)
+                .addClass(type.type.name.toLowerCase()) // Add the type name as a class
+                .appendTo($typesList);
+        });
+
+        // Set height and weight
+        $height.text(data.height * 10 + 'cm');
+        $weight.text(data.weight + 'kg');
+
+        // Append abilities to the list
+        $.each(data.abilities, function (index, ability) {
+            $("<li>").text(ability.ability.name).appendTo($abilities);
+        });
+
+        // Display the fetched information
+        $imgElement.show();
+        $displayName.show();
+        $typesList.show();
+        $height.show();
+        $weight.show();
+        $id.show();
+        $abilities.show();
+
+    } catch (error) {
         console.error(error);
     }
 }
 
+// Example: Call the function when a button is clicked
+$("#fetchPokemon").click(fetchData);

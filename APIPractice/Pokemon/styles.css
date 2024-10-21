@@ -77,3 +77,19 @@ button:hover { /* Add hover effect for the button */
 #pokemonTypes li.grass {
     background-color: #90EE90; /* Grass type */
 }
+#pokemonTypes li.normal{
+    background-color: bisque;
+}
+#pokemonAbilities { /* Style the list of Pokémon types */
+    list-style: none; /* Remove default bullet points */
+    padding: 0;
+    margin: 0;
+}
+#pokemonAbilities li { /* Style individual type list items */
+    display: inline-block;
+    margin-right: 1rem;
+    padding: 0.5rem 1rem;
+    border-radius: 4px;
+    background-color: #f1f1f1; /* Light gray background */
+    font-size: 0.8rem; /* Smaller font size */
+}/* Add color rules for different types */
