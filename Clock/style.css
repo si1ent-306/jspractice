@@ -1,0 +1,24 @@
+body{
+    margin: 0;
+    background-image: url("regina.png");
+    background-repeat: no-repeat;
+    background-size: cover;
+    background-position: center center;
+    background-attachment: fixed;
+}
+#clock-container{
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    height: 100vh;
+}
+#clock{
+    font-family: monospace;
+    font-size: 6.5rem;
+    font-weight: bold;
+    text-align: center;
+    color: white;
+    backdrop-filter: blur(10px);
+    width: 100%;
+    background-color: hsl(0, 0%, 100%, 0.1);
+}
