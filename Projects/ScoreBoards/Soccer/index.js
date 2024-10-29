@@ -7,8 +7,8 @@ const awayGoalBtn = document.getElementById("awayGoal");
 const homeScore = document.getElementById("homeScore");
 const awayScore = document.getElementById("awayScore");
 let clockRunning = false;
-let minutes;
-let seconds;
+let minutes = 0;
+let seconds = 0;
 let intervalId;
 
 startBtn.addEventListener("click", startGame);
@@ -20,8 +20,6 @@ awayGoalBtn.addEventListener("click", awayGoal);
 function startGame() {
     if (!clockRunning) {
         clockRunning = true;
-        minutes = 0;
-        seconds = 0;
         intervalId = setInterval(updateClock, 1000);
     }
 }
@@ -55,4 +53,3 @@ function updateClock() {
     }
     clock.innerText = `${minutes.toString().padStart(2, "0")}:${seconds.toString().padStart(2, "0")}`;
 }
-

@@ -1,0 +1,28 @@
+#scoreboard{
+    display: flex;
+    flex-direction: row;
+    justify-content: space-around;
+    align-items: center;
+    width: 400px;
+    margin: auto;
+    background-color: #f2f2f2;
+    border-radius: 10px;
+    padding: 10px;
+    box-shadow: 0 2px 2px rgba(0, 0, 0, 0.3);
+}
+#scoreboard h2{
+    font-size: 2rem;
+    margin: 0;
+}
+#scoreboard p{
+    font-size: 4rem;
+    margin: 0;
+}
+#clockDiv{
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+}
+#clockDiv button{
+    margin: 10px;
+}

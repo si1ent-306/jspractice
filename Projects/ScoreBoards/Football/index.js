@@ -50,6 +50,10 @@ function startGame() {
         clockRunning = true;
         startClock();
         gameRestarted = true; // Set gameRestarted to true
+        if(minutes === 0 && seconds === 0) {
+            alert("quarter over");
+            setQuarter(quarter + 1);
+        }
     }
 }
 // Function to pause the game
@@ -102,6 +106,10 @@ function setQuarter() {
         alert("Quarter set to " + quarter);
         quarterBtn.innerText = "Q: " + quarter
     }
+}
+function setQuarter(newQuarter) {
+    quarter = newQuarter;
+
 }
 function homeTD() {
     homeScoreCount = homeScoreCount + 6;
