@@ -1,3 +1,4 @@
+@import url('https://fonts.googleapis.com/css2?family=Bungee+Shade&family=Raleway:ital,wght@0,100..900;1,100..900&display=swap');
 /* Reset margin, padding, and box-sizing for all elements */
 * {
     margin: 0;
@@ -12,7 +13,7 @@ body, html {
     align-items: center; /* Center vertically */
     justify-content: center; /* Center horizontally */
     background: linear-gradient(135deg, #6a0dad, #8e44ad); /* Apply a purple gradient background */
-    font-family: Arial, sans-serif; /* Use a sans-serif font for text */
+
 }
 
 /* Style the main container holding the form elements */
@@ -25,7 +26,14 @@ body, html {
     max-width: 400px; /* Limit the container width for better layout */
     width: 100%; /* Make sure the container takes the available width up to max-width */
 }
-
+#container h2{
+    font-family: "Bungee Shade", sans-serif; /* Use a sans-serif font for text */
+    font-size: 3rem;
+    padding: 1rem;
+}
+#container label{
+    font-family: "Raleway", sans-serif ;
+}
 /* Style the header inside the container */
 #div-header {
     color: #6a0dad; /* Set the header color to match the gradient */
@@ -40,6 +48,10 @@ input, select, button {
     border: 1px solid #ddd; /* Set a light gray border */
     border-radius: 5px; /* Round the corners */
     font-size: 1rem; /* Set font size */
+}
+input{
+    height: 9rem;
+
 }
 
 /* Style the button specifically */
