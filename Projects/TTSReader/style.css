@@ -1,0 +1,56 @@
+/* Reset margin, padding, and box-sizing for all elements */
+* {
+    margin: 0;
+    padding: 0;
+    box-sizing: border-box;
+}
+
+/* Set full height for the body and html, and center the content vertically and horizontally */
+body, html {
+    height: 100%; /* Make sure the container takes the full height of the viewport */
+    display: flex; /* Enable flexbox for centering */
+    align-items: center; /* Center vertically */
+    justify-content: center; /* Center horizontally */
+    background: linear-gradient(135deg, #6a0dad, #8e44ad); /* Apply a purple gradient background */
+    font-family: Arial, sans-serif; /* Use a sans-serif font for text */
+}
+
+/* Style the main container holding the form elements */
+#container {
+    background-color: white; /* Set the background color to white */
+    padding: 20px; /* Add padding inside the container */
+    border-radius: 10px; /* Round the corners of the container */
+    box-shadow: 0 4px 8px rgba(0, 0, 0, 0.2); /* Add a subtle shadow for depth */
+    text-align: center; /* Center text within the container */
+    max-width: 400px; /* Limit the container width for better layout */
+    width: 100%; /* Make sure the container takes the available width up to max-width */
+}
+
+/* Style the header inside the container */
+#div-header {
+    color: #6a0dad; /* Set the header color to match the gradient */
+    margin-bottom: 20px; /* Add space below the header */
+}
+
+/* Style input, select, and button elements within the container */
+input, select, button {
+    margin: 10px 0; /* Add vertical spacing between elements */
+    padding: 10px; /* Add padding inside each element */
+    width: 100%; /* Make elements take up the full width of the container */
+    border: 1px solid #ddd; /* Set a light gray border */
+    border-radius: 5px; /* Round the corners */
+    font-size: 1rem; /* Set font size */
+}
+
+/* Style the button specifically */
+button {
+    background-color: #6a0dad; /* Set a purple background color */
+    color: white; /* Set the text color to white */
+    cursor: pointer; /* Change cursor to pointer on hover */
+    transition: background 0.3s; /* Add a smooth transition effect for hover */
+}
+
+/* Add a hover effect to the button */
+button:hover {
+    background-color: #8e44ad; /* Change background to a lighter purple on hover */
+}
