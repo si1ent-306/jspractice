@@ -33,6 +33,7 @@ body, html {
 }
 #container label{
     font-family: "Raleway", sans-serif ;
+    font-size: 1.5rem;
 }
 /* Style the header inside the container */
 #div-header {
@@ -48,6 +49,7 @@ input, select, button {
     border: 1px solid #ddd; /* Set a light gray border */
     border-radius: 5px; /* Round the corners */
     font-size: 1rem; /* Set font size */
+    font-family: "Century Gothic", sans-serif;
 }
 input{
     height: 9rem;
