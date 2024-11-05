@@ -1,7 +1,7 @@
 @import url('https://fonts.googleapis.com/css2?family=Bungee+Shade&family=Raleway:ital,wght@0,100..900;1,100..900&display=swap');
 /* Reset margin, padding, and box-sizing for all elements */
 * {
-    margin: 0;
+    margin: 30px;
     padding: 0;
     box-sizing: border-box;
 }
@@ -23,7 +23,7 @@ body, html {
     border-radius: 10px; /* Round the corners of the container */
     box-shadow: 0 4px 8px rgba(0, 0, 0, 0.2); /* Add a subtle shadow for depth */
     text-align: center; /* Center text within the container */
-    max-width: 400px; /* Limit the container width for better layout */
+    max-width: 600px; /* Limit the container width for better layout */
     width: 100%; /* Make sure the container takes the available width up to max-width */
 }
 #container h2{
@@ -51,9 +51,20 @@ input, select, button {
     font-size: 1rem; /* Set font size */
     font-family: "Century Gothic", sans-serif;
 }
-input{
+#select-voice-label{
+    font-size: 1rem;
+    font-family: "Century Gothic", sans-serif;
+    display: block;
+}
+textarea{
     height: 9rem;
-
+    padding: 10px;
+    border: 1px solid #ddd;
+    border-radius: 5px;
+    font-size: 1rem;
+    font-family: "Century Gothic", sans-serif;
+    resize: none; /* Make the textarea not resizable */
+    width: 80%; /* Make the textarea wider */
 }
 
 /* Style the button specifically */
