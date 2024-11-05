@@ -1,20 +1,17 @@
-const selectAccent = document.getElementById('select-accent');
-function makeTTS() {
-    const input = document.getElementById('tts-input');
-    const text = input.value;
-    const selectedAccent = selectAccent.value;
-    const utterance = new SpeechSynthesisUtterance(text);
-    utterance.voice = getVoice(selectedAccent);
-    window.speechSynthesis.speak(utterance);
+let speech = new SpeechSynthesisUtterance();
+let voices = [];
+let voiceSelect = document.querySelector('select');
+
+window.speechSynthesis.onvoiceschanged = () => {
+    voices = window.speechSynthesis.getVoices();
+    speech.voice = voices[0];
+    voices.forEach((voice, i) => {
+        (voiceSelect.options[i] = new Option(voice.name, i));
+    })
 }
 
-function getVoice(accent) {
-    // Define the voices for each accent
-    const voices = {
-        'american-male': 'Google US English Male',
-        'british-male': 'Google UK English Male',
-        'american-female': 'Google US English Female',
-        'british-female': 'Google UK English Female',
-    };
-    return voices[accent];
-}
+document.querySelector('button').addEventListener('click', () => {
+    speech.text = document.querySelector('input').value;
+    speech.voice = voices[voiceSelect.value];
+    speechSynthesis.speak(speech);
+});
