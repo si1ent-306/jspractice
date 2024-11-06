@@ -2,9 +2,31 @@
 <html lang="en">
 <head>
     <meta charset="UTF-8">
-    <title>Title</title>
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Blackjack</title>
+    <style>
+        .card {
+            border: 1px solid black;
+            padding: 10px;
+            margin: 10px;
+        }
+    </style>
 </head>
 <body>
+<h1>Blackjack</h1>
+<div id="player-1">
+    <h2>Player 1</h2>
+    <div id="hand-0"></div>
+    <div id="points-0"></div>
+</div>
+<div id="player-2">
+    <h2>Player 2</h2>
+    <div id="hand-1"></div>
+    <div id="points-1"></div>
+</div>
+<button id="hit-button">Hit</button>
+<button id="stand-button">Stand</button>
 
+<script src="index.js"></script>
 </body>
 </html>
