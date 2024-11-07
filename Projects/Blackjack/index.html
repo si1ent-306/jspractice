@@ -4,28 +4,22 @@
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
     <title>Blackjack</title>
-    <style>
-        .card {
-            border: 1px solid black;
-            padding: 10px;
-            margin: 10px;
-        }
-    </style>
 </head>
 <body>
 <h1>Blackjack</h1>
-<div id="player-1">
-    <h2>Player 1</h2>
-    <div id="hand-0"></div>
-    <div id="points-0"></div>
+<div id="dealer">
+    <h2>Dealer</h2>
+    <div id="dealer-hand"></div>
+    <div id="dealer-points"></div>
 </div>
-<div id="player-2">
-    <h2>Player 2</h2>
-    <div id="hand-1"></div>
-    <div id="points-1"></div>
+<div id="player">
+    <h2>Player</h2>
+    <div id="player-hand"></div>
+    <div id="player-points"></div>
 </div>
-<button id="hit-button">Hit</button>
+<button id="hit-button" onclick="drawCard()">Hit</button>
 <button id="stand-button">Stand</button>
+<img id="card"></img>
 
 <script src="index.js"></script>
 </body>
