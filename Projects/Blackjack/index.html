@@ -7,6 +7,7 @@
 </head>
 <body>
 <h1>Blackjack</h1>
+<button id="start-button" onclick="startGame()">Start Game</button>
 <div id="dealer">
     <h2>Dealer</h2>
     <div id="dealer-hand"></div>
@@ -17,8 +18,8 @@
     <div id="player-hand"></div>
     <div id="player-points"></div>
 </div>
-<button id="hit-button" onclick="drawCard()">Hit</button>
-<button id="stand-button">Stand</button>
+<button id="hit-button" onclick="hit()" style="display: none">Hit</button>
+<button id="stand-button" onclick="stand()" style="display: none">Stand</button>
 <img id="card"></img>
 
 <script src="index.js"></script>
